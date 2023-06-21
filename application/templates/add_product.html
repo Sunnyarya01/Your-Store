@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}
+    Add Product
+{% endblock title %}
+{% block link %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='imgs/logo.svg') }}" type="image/x-icon">
+{% endblock link %}
+{% block body %}
+<div class="container mt-5">
+    <h1>Add Product</h1>
+
+    <form method="post" action="/product" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <select id="category" name="category" required>
+                <option value="#">Select</option>
+                <option value="Fruits and Vegetables">Fruits and Vegetables</option>
+                <option value="Backery and Bread">Backery and Bread</option>
+                <option value="Dairy and Eggs">Dairy and Eggs</option>
+                <option value="Snacks and Confectionery">Snacks and Confectionery</option>
+                <option value="Baby and Child Care">Baby and Child Care</option>
+                <option value="Personal Care">Personal Care</option>
+                <option value="Health and Wellness">Health and Wellness</option>
+                <option value="Spices and Herbs">Spices and Herbs</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="product_name" class="form-label">Product Name</label>
+            <input type="text" class="form-control" id="product_name" name="product_name" required>
+        </div>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="text" class="form-control" id="quantity" name="quantity" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+        </div>
+        <div class="mb-3">
+            <label for="unit_price" class="form-label">Unit Price</label>
+            <input type="number" class="form-control" id="unit_price" name="unit_price" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" class="form-control" id="image" name="image" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+</div>
+
+{% endblock body %}

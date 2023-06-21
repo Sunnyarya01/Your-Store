@@ -1,0 +1,137 @@
+{% extends 'navbar.html' %}
+{% block title %}
+{{user.name}} | Customer
+{% endblock title %}
+{% block link1 %}
+/customer/{{user.id}}
+{% endblock link1 %}
+{% block link2 %}
+/customer/{{user.id}}
+{% endblock link2 %}
+{% block name %}
+<h1 class="h5">Welcome {{user.name}}</h1>
+{% endblock name %}
+
+{% block body %}
+<div class="mycontainer">
+    <div class="slide">
+        <img src="{{ url_for('static', filename='imgs/firstslide.jpeg') }}" alt="Slide 1">
+    </div>
+    <div class="slide">
+        <img src="{{ url_for('static', filename='imgs/secondslide.jpeg') }}" alt="Slide 2">
+    </div>
+</div>
+
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+    {% for product in products %}
+    {% if product.category=="Fruits and Vegetables" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+    {% for product in products %}
+    {% if product.category=="Backery and Bread" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">    
+    {% for product in products %}
+    {% if product.category=="Dairy and Eggs" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">    
+    {% for product in products %}
+    {% if product.category=="Snacks and Confectionery" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+    {% for product in products %}
+    {% if product.category=="Baby and Child Care" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+    {% for product in products %}
+    {% if product.category=="Personal Care" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+    {% for product in products %}
+    {% if product.category=="Health and Wellness" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+    {% for product in products %}
+    {% if product.category=="Spices and Herbs" %}
+    <div class="card" style="width: 10rem;">
+        <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.product_name }}</h5>
+            <p class="card-text">{{product.unit_price}}</p>
+            <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock body %}

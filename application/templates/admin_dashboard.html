@@ -1,0 +1,62 @@
+{% extends 'navbar.html' %}
+{% block title %}
+Admin
+{% endblock title %}
+{% block link1 %}
+/admin_dashboard
+{% endblock link1 %}
+{% block link2 %}
+/admin_dashboard
+{% endblock link2 %}
+{% block dropdown %}
+Add
+{% endblock dropdown %}
+{% block dropdown1 %}
+<li><a class="dropdown-item" href="/product">Add Product</a></li>
+{% endblock dropdown1 %}
+{% block dropdown2 %}
+<li><a class="dropdown-item" href="/register">Add User</a></li>
+{% endblock dropdown2 %}
+{% block dropdown3 %}
+<li><a class="dropdown-item" href="/customer/{{id}}">Go to Customer Page</a></li>
+{% endblock dropdown3 %}
+{% block name %}
+<h1 class="h5">Welcome to Admin Dashboard</h1>
+{% endblock name %}
+{% block body %}
+<h3>Users:-</h3>
+<div class="card-holder">
+    {% for user in users_all %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{user.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">User id : {{ user.username }}</h6>
+            <p class="card-text">Age: {{ user.age }} <br> City: {{user.city}} <br> E-Mail: {{ user.email }} <br> Mobile
+                Number: {{ user.mobile_no }} </p>
+            <a href="/user/{{ user.id }}/update" class="btn btn-primary btn-sm">Update</a>
+            <a href="/user/{{ user.id }}/delete" class="btn btn-danger btn-sm">Delete</a>
+            <p class="text">{{ user.role }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h3>Products:-</h3>
+<div class="card-holder">
+    {% for product in products_all %}
+    <div class="card" style="width: 18rem;">
+        <p>{{ product.name }}</p>
+        {% if product.image %}
+        <img src="data:image/jpeg;base64,{{ product.image }}" alt="Product Image">
+        {% else %}
+        <p>No image available</p>
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{product.product_name}}</h5>
+            <p class="card-text">Price: {{product.price}} <br> Quantity: {{product.quantity}} <br> Unit Price: {{product.unit_price}} <br> {{product.description}} </p>
+            <a href="/product/{{product.id}}/update" class="btn btn-primary btn-sm">Update</a>
+            <a href="/product/{{product.id}}/delete" class="btn btn-danger btn-sm">Delete</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock body %}
