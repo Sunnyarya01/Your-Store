@@ -6,8 +6,6 @@ from flask import flash, g, redirect, render_template, request, session, url_for
 
 from application.models import Product, User
 from application.database import db
-import tkinter as tk
-from tkinter import ttk
 
 @app.route('/', methods=['GET'])
 def home():
