@@ -3,7 +3,7 @@
     Home
 {% endblock title %}
 {% block body %}
-<div class="mycontainer">
+<div class="mycontainer mycontainer1">
     <div class="slide">
         <img src="{{ url_for('static', filename='imgs/firstslide.jpeg') }}" alt="Slide 1">
     </div>
@@ -12,10 +12,10 @@
     </div>
 </div>
 
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+<div class="mycontainer container-fluid py-2 shadow-sm p-3 mb-2 bg-white rounded">
     {% for product in products %}
     {% if product.category=="Fruits and Vegetables" %}
-    <div class="card" style="width: 10rem;">
+    <div class="card" style="width: 10rem">
         <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
         <div class="card-body">
             <h5 class="card-title">{{ product.product_name }}</h5>
@@ -26,7 +26,7 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+<div class="mycontainer scrolling-wrapper shadow-sm p-3 mb-2 bg-white rounded">
     {% for product in products %}
     {% if product.category=="Backery and Bread" %}
     <div class="card" style="width: 10rem;">
@@ -40,7 +40,7 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">    
+<div class="mycontainer scrolling-wrapper shadow-sm p-3 mb-2 bg-white rounded">    
     {% for product in products %}
     {% if product.category=="Dairy and Eggs" %}
     <div class="card" style="width: 10rem;">
@@ -54,10 +54,10 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">    
+<div class="mycontainer scrolling-wrapper shadow-sm p-3 mb-2 bg-white rounded">    
     {% for product in products %}
     {% if product.category=="Snacks and Confectionery" %}
-    <div class="card" style="width: 10rem;">
+    <div class="card" style="width: 1rem;">
         <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
         <div class="card-body">
             <h5 class="card-title">{{ product.product_name }}</h5>
@@ -68,7 +68,7 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+<div class="mycontainer scrolling-wrapper shadow-sm p-3 mb-2 bg-white rounded">
     {% for product in products %}
     {% if product.category=="Baby and Child Care" %}
     <div class="card" style="width: 10rem;">
@@ -82,7 +82,7 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+<div class="mycontainer scrolling-wrapper shadow-sm p-3 mb-2 bg-white rounded">
     {% for product in products %}
     {% if product.category=="Personal Care" %}
     <div class="card" style="width: 10rem;">
@@ -96,7 +96,7 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+<div class="mycontainer scrolling-wrapper shadow-sm p-3 mb-2 bg-white rounded">
     {% for product in products %}
     {% if product.category=="Health and Wellness" %}
     <div class="card" style="width: 10rem;">
@@ -110,10 +110,10 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="mycontainer shadow-sm p-3 mb-2 bg-white rounded">
+<div class="mycontainer container-fluid py-2 shadow-sm p-3 mb-2 bg-white rounded">
     {% for product in products %}
     {% if product.category=="Spices and Herbs" %}
-    <div class="card" style="width: 10rem;">
+    <div class="card me-2">
         <img src="data:image/jpeg;base64,{{ product.image }}" class="card-img-top" alt="image">
         <div class="card-body">
             <h5 class="card-title">{{ product.product_name }}</h5>

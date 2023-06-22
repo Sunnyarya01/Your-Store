@@ -184,7 +184,8 @@ def product():
             )
             db.session.add(product)
             db.session.commit()
-            return flash("Product")
+            flash("Product")
+            return redirect("/admin_dashboard")
     else:
         return "Unauthorized Person"
     
@@ -229,7 +230,8 @@ def product_update(id):
             product.id = id
             db.session.add(product)
             db.session.commit()
-            return redirect(url_for('get_all_user'))
+            flash("Porduct added")
+            return redirect("/admin_dashboard")
         else:
             return render_template('pupdate.html', product=product)
     return redirect('/login')
