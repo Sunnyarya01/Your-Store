@@ -46,7 +46,7 @@ Add
     <div class="card" style="width: 18rem;">
         <p>{{ product.name }}</p>
         {% if product.image %}
-        <img src="data:image/jpeg;base64,{{ product.image }}" alt="Product Image">
+        <img src="data:image/jpeg;base64,{{ product.image }}" alt="Product Image" class="img-fluid">
         {% else %}
         <p>No image available</p>
         {% endif %}

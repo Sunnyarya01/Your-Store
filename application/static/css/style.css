@@ -1,124 +1,18 @@
-.card-holder {
-    display: grid;
-    grid-template-columns: repeat(3, 25%);
-    row-gap: 13px;
-    /* border: 1px solid red; */
-    width: 88%;
-    margin: auto;
-    margin-top: 1vw;
-}
-
-.text {
-    color: gainsboro;
-    font-size: xx-small;
-}
-
 .navbar {
     position: sticky;
 }
 
-@media only screen and (max-width: 800px) {
-    .card-holder {
-        display: grid;
-        grid-template-columns: repeat(2, 4fr);
-        gap: 10px;
-        /* border: 1px solid red; */
-        width: 88%;
-        margin: auto;
-    }
+.card-container {
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-@media only screen and (max-width: 450px) {
-    .card-holder {
-        display: grid;
-        grid-template-columns: repeat(1, 4fr);
-        gap: 10px;
-        /* border: 1px solid red; */
-        width: 88%;
-        margin: auto;
-    }
+.card {
+    display: inline-block;
+    width: 15rem;
+    margin: 10px;
+    white-space: normal;
 }
-
-.popup {
-    width: 16vw;
-    height: 4vw;
-    position: none;
-    border: none;
-    background: #d4edda;
-    color: #4BB543;
-    box-shadow: #d4edda 0px 5px 15px;
-}
-
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input[type="password"] {
-    padding-right: 30px;
-}
-
-.form-group .toggle-password {
-    position: relative;
-    top: -28px;
-    right: 5px;
-    cursor: pointer;
-}
-
-.mycontainer {
-    position: relative;
-    width: 97%;
-    height: 350px;
-    overflow: hidden;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    margin: auto;
-    display: flex;
-}
-
-@media only screen and (max-width: 450px) {
-    .mycontainer {
-        position: relative;
-        width: 97%;
-        height: 280px;
-        overflow: hidden;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        margin: auto;
-    }
-
-    .mycontainer1 {
-        position: relative;
-        width: 97%;
-        height: 100px;
-        overflow: hidden;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        margin: auto;
-    }
-
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none;
-    /* border: 1px solid red; */
-    margin: auto;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 
 .footer {
     background-color: #f4f4f4;
